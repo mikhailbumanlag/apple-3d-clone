@@ -3,9 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 function Model(props) {
-  const { nodes, materials } = useGLTF(
-    "apple-3d-clone/public/models/scene.glb"
-  );
+  const { nodes, materials } = useGLTF("models/scene.glb");
 
   const texture = useTexture(props.item.img);
 
@@ -252,4 +250,4 @@ function Model(props) {
 
 export default Model;
 
-useGLTF.preload("apple-3d-clone/public/models/scene.glb");
+useGLTF.preload("models/scene.glb");
